@@ -28,4 +28,4 @@ Route::post('/profile/create', 'UserProfilesController@create');
 
 //旅行プラン登録
 Route::get('/travel/plan/create', 'TravelPlansController@showTravelPlan')->name('travel.plan.create');
-Route::post('/travel/plan/create', 'TravelPlansController@createTravelPlan')->name('travel.plan.create');
+Route::post('/travel/plan/create', 'TravelPlansController@createTravelPlan');

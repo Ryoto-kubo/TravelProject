@@ -21,12 +21,11 @@ class CreateTravelplansTable extends Migration
             $table->integer('price');
             $table->string('area');
             $table->string('place');
-            // $table->string('category');
-            $table->string('travel_img01');
-            $table->string('travel_img02')->nullable();
-            $table->string('travel_img03')->nullable();
-            $table->string('travel_img04')->nullable();
-            $table->string('travel_img05')->nullable();
+            $table->char('travel_img01');
+            $table->char('travel_img02')->nullable();
+            $table->char('travel_img03')->nullable();
+            $table->char('travel_img04')->nullable();
+            $table->char('travel_img05')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
@@ -40,9 +39,9 @@ class CreateTravelplansTable extends Migration
      */
     public function down()
     {
-        // Schema::dropIfExists('travelplans');
-        Schema::table('travelplans', function ($table) {
-            $table->dropColumn('category');
-        });
+        Schema::dropIfExists('travelplans');
+        // Schema::table('travelplans', function ($table) {
+        //     $table->dropColumn('category');
+        // });
     }
 }

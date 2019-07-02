@@ -11,6 +11,7 @@ class TravelPlan extends Model
     const UPDATED_AT = 'updated_at';
     
     protected $guarded = array('id');
+    
     // テーブル名の指定
     protected $table = 'travelplans';
 }

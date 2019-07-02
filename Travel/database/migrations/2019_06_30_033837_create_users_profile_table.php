@@ -18,7 +18,7 @@ class CreateUsersProfileTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('name')->default('no name');
             $table->text('profile')->nullable();
-            $table->string('user_img')->nullable();
+            $table->char('user_img')->nullable();
             $table->string('favorite_spot')->nullable();
             $table->timestamps();
 

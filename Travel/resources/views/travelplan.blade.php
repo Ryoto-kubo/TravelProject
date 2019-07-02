@@ -3,7 +3,8 @@
 @section('content')
     <p>旅行プラン登録</p>
     <form class="create-form" method="post" action="/travel/plan/create" enctype="multipart/form-data">
-
+    @csrf
+    
     @if($errors->has('title'))
         <span class="error-msg">{{ $errors->first('title') }}</span>
     @endif
@@ -148,6 +149,6 @@
         <input type="file" class="input" name="travel_img05">
     </div>
 
-
+    <button　type="submit">送信</button>
     </form>
 @endsection
