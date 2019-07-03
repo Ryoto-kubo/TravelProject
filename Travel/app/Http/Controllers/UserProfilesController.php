@@ -33,14 +33,29 @@ class UserProfilesController extends Controller
     {
         $carrent_user_id = Auth::id();
         
+        //プロフィール編集時imgデータを選択しなかった時の処理
+        if($request->user_img !== NUll)
+        {   
+            // オリジナルのnameを取得
+            $file_name = $request->user_img->getClientOriginalName();
+            // 画像を「Storage/app/public」に保存する
+            // storeAsを「images」に変えれば「Storage/app/images」となる
+            $filepath = $request->user_img->storeAs('public',$file_name);
+            var_dump($filepath);
+            $file = str_replace('public/', '', $filepath);
+
+        }else{
+            $file = $request->user_img;
+        }
+
         $users_profile = UserProfiles::updateOrCreate([
             'user_id'       => $carrent_user_id
         ], [
             'user_id'       => $carrent_user_id,
             'name'          => $request->name,
             'profile'       => $request->profile,
+            'user_img'      => $file, //パスをDBに保存
             'favorite_spot' => $request->favorite_spot,
-            'user_img'      => $request->user_img,
         ]); 
 
         $users_profile = UserProfiles::where('user_id', $carrent_user_id)->get();

@@ -32,7 +32,7 @@ class UsersProfileRequest extends FormRequest
             'name'          => 'required',
             'profile'       => 'nullable|max:160',
             'favorite_spot' => 'nullable|max:100',
-            'user_img'      => 'nullable|file|image', 
+            'user_img'      => 'nullable|file|image|mimes:jpeg,png,jpg,gif', 
         ];
     }
 }
