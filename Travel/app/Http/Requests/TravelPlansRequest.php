@@ -30,15 +30,15 @@ class TravelPlansRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'introduction' => 'required|max500',
+            'introduction' => 'required|max:500',
             'price' => 'required|numeric',
             'area' => 'required',
             'place' => 'required',
-            'travel_img01' => 'required|file|image',
-            'travel_img02' => 'nullable|file|image',
-            'travel_img03' => 'nullable|file|image',
-            'travel_img04' => 'nullable|file|image',
-            'travel_img05' => 'nullable|file|image',
+            'travel_img01' => 'required|file|image|mimes:jpeg,png,jpg,gif',
+            'travel_img02' => 'nullable|file|image|mimes:jpeg,png,jpg,gif',
+            'travel_img03' => 'nullable|file|image|mimes:jpeg,png,jpg,gif',
+            'travel_img04' => 'nullable|file|image|mimes:jpeg,png,jpg,gif',
+            'travel_img05' => 'nullable|file|image|mimes:jpeg,png,jpg,gif',
         ];
     }
 }

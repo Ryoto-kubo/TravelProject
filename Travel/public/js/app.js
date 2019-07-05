@@ -1693,31 +1693,9 @@ module.exports = {
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    console.log('Component mounted.');
-  }
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Applications/Laravel/TravelProject/Travel/resources/js/components/ExampleComponent.vue: Only one default export allowed per module. (24:4)\n\n\u001b[0m \u001b[90m 22 | \u001b[39m    }\u001b[0m\n\u001b[0m \u001b[90m 23 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 | \u001b[39m    \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 | \u001b[39m    data() {\u001b[0m\n\u001b[0m \u001b[90m 26 | \u001b[39m        \u001b[36mreturn\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 27 | \u001b[39m            isDrag\u001b[33m:\u001b[39m \u001b[36mnull\u001b[39m\u001b[0m\n    at Parser.raise (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Parser.checkDuplicateExports (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:11095:18)\n    at Parser.checkExport (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:11030:14)\n    at Parser.parseExport (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:10869:12)\n    at Parser.parseStatementContent (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:9892:27)\n    at Parser.parseStatement (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Parser.parseBlockOrModuleBlockBody (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Parser.parseBlockBody (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Parser.parseTopLevel (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:9717:10)\n    at Parser.parse (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:11233:17)\n    at parse (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/parser/lib/index.js:11269:38)\n    at parser (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/Applications/Laravel/TravelProject/Travel/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at /Applications/Laravel/TravelProject/Travel/node_modules/@babel/core/lib/transform.js:34:34\n    at processTicksAndRejections (internal/process/task_queues.js:82:9)");
 
 /***/ }),
 
@@ -49372,9 +49350,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/Laravel/Travel/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /Applications/Laravel/Travel/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Applications/Laravel/Travel/resources/sass/style.scss */"./resources/sass/style.scss");
+__webpack_require__(/*! /Applications/Laravel/TravelProject/Travel/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Applications/Laravel/TravelProject/Travel/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Applications/Laravel/TravelProject/Travel/resources/sass/style.scss */"./resources/sass/style.scss");
 
 
 /***/ })

@@ -19,6 +19,9 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link href="{{ mix('css/style.css') }}" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous"></head>
 </head>
 <body>
     <div id="app">
@@ -58,6 +61,9 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('mypage') }}">
                                          マイページ
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('mytravelplan') }}">
+                                         作成旅行プラン一覧
                                     </a>
                                     <a class="dropdown-item" href="{{ route('profile.create') }}">
                                         プロフィール編集

@@ -20,4 +20,22 @@
             console.log('Component mounted.')
         }
     }
+
+    export default {
+    data() {
+        return {
+            isDrag: null
+        }
+    },
+    methods: {
+        checkDrag(event, key, status){ //★④
+            if (status && event.dataTransfer.types == "text/plain") {
+                //ファイルではなく、html要素をドラッグしてきた時は処理を中止
+                return false
+            }
+            this.isDrag = status ? key : null
+        },
+    }
+};
+
 </script>

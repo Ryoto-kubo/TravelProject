@@ -58,9 +58,6 @@ class UserProfilesController extends Controller
             'favorite_spot' => $request->favorite_spot,
         ]); 
 
-        $users_profile = UserProfiles::where('user_id', $carrent_user_id)->get();
-        return view('mypage', [
-                'users_profile' => $users_profile
-        ]);
+        return redirect('/mypage');
     }
 }

@@ -34,10 +34,18 @@
     @if($errors->has('user_img'))
         <span class="error-msg">{{ $errors->first('user_img') }}</span>
     @endif
-    <div>
-        <input type="file" class="input" name="user_img" value="{{ $userdata ? $user_profile->user_img : null }}">
-    </div>
-
+    <label for="user_img">
+        <div :class="[{'-drag': isDrag == 'new'}]"
+                @dragover.prevent="checkDrag($event, 'new', true)"
+                @dragleave.prevent="checkDrag($event, 'new' ,false)"
+                @drop.prevent="onDrop">
+            <div class="drop">ファイルを選択
+                <i aria-hidden="true" class="fas fa-plus fa-7x"></i>
+                <input id="user_img" style="display:none;" type="file" class="input js-img" name="user_img" value="{{ $userdata ? $user_profile->user_img : null }}">
+            </div>
+        </div>
+    </label>
+    <example-component>fff</example-component>
     <div><button type="submit">送信</button></div>
 </form>
 @endsection
