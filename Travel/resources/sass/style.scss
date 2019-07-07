@@ -26,36 +26,34 @@ select{
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    .over{
+    .drop{
+        position: relative;
+        width: 300px;
+        height: 450px;
         overflow: hidden;
-        .drop{
-            position: relative;
+        cursor: pointer;
+        border: 1px solid #232323;
+        .input{
+            position: absolute;
             width: 300px;
             height: 450px;
-            cursor: pointer;
-            .input{
-                position: absolute;
-                width: 300px;
-                height: 450px;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);            
-                border: 1px solid #232323;
-                z-index: 999;
-                opacity: 0;
-            }
-            .fas{
-                position: absolute;
-                opacity: 0.3;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                z-index: -1;
-            }
-            .img{
-                width: 300px;
-                height: 450px;
-            }
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);            
+            z-index: 999;
+            opacity: 0;
+        }
+        .fas{
+            position: absolute;
+            opacity: 0.3;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        .img{
+            width: 300px;
+            height: 450px;
         }
     }
 }

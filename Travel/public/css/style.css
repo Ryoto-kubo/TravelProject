@@ -20,18 +20,16 @@ select {
   text-align: center;
 }
 
-.create-form .over {
-  overflow: hidden;
-}
-
-.create-form .over .drop {
+.create-form .drop {
   position: relative;
   width: 300px;
   height: 450px;
+  overflow: hidden;
   cursor: pointer;
+  border: 1px solid #232323;
 }
 
-.create-form .over .drop .input {
+.create-form .drop .input {
   position: absolute;
   width: 300px;
   height: 450px;
@@ -39,12 +37,11 @@ select {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  border: 1px solid #232323;
   z-index: 999;
   opacity: 0;
 }
 
-.create-form .over .drop .fas {
+.create-form .drop .fas {
   position: absolute;
   opacity: 0.3;
   left: 50%;
@@ -54,7 +51,7 @@ select {
   z-index: -1;
 }
 
-.create-form .over .drop .img {
+.create-form .drop .img {
   width: 300px;
   height: 450px;
 }
