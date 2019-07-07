@@ -34,18 +34,27 @@
     @if($errors->has('user_img'))
         <span class="error-msg">{{ $errors->first('user_img') }}</span>
     @endif
-    <label for="user_img">
-        <div :class="[{'-drag': isDrag == 'new'}]"
-                @dragover.prevent="checkDrag($event, 'new', true)"
-                @dragleave.prevent="checkDrag($event, 'new' ,false)"
-                @drop.prevent="onDrop">
+    <!-- <div class="over">
+        <label for="user_img">
             <div class="drop">ファイルを選択
                 <i aria-hidden="true" class="fas fa-plus fa-7x"></i>
-                <input id="user_img" style="display:none;" type="file" class="input js-img" name="user_img" value="{{ $userdata ? $user_profile->user_img : null }}">
+                <input id="user_img" type="file" class="input js-img" name="user_img" value="{{ $userdata ? $user_profile->user_img : null }}">
             </div>
-        </div>
-    </label>
-    <example-component>fff</example-component>
+        </label>
+    </div> -->
+    <div class="over">
+        <label for="file-sample">
+            <div class="drop">
+                <input class="input" id="file-sample" type="file">
+                <i aria-hidden="true" class="fas fa-plus fa-7x"></i>
+                <img class="img" id="file-preview">
+            </div>
+        </label>
+    </div>
+    
+    <div id="img-load">
+        <img-upload></img-upload>
+    </div>
     <div><button type="submit">送信</button></div>
 </form>
 @endsection
