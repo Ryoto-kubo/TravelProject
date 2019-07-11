@@ -4,7 +4,7 @@
 <p>プロフィール編集</p>
 <form class="create-form" method="post" action="/profile/create" enctype="multipart/form-data">
     @csrf
-
+    
     @if($userdata > 0)
         @foreach($users_profile as $user_profile)
         @endforeach
@@ -30,11 +30,14 @@
     <div>
         <input type="text" class="input" name="favorite_spot" value="{{ $userdata ? $user_profile->favorite_spot : null }}">
     </div>
-
+    
     @if($errors->has('user_img'))
         <span class="error-msg">{{ $errors->first('user_img') }}</span>
     @endif
-        <img-upload></img-upload>
+    <user-img-preview
+        image="{{$userdata ? $user_profile->user_img : 'NUll'}}"
+        image-path="/storage/">
+    </user-img-preview>
     <div><button type="submit">送信</button></div>
 </form>
 @endsection

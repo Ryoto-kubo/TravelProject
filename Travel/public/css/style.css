@@ -20,19 +20,22 @@ select {
   text-align: center;
 }
 
-.create-form .drop {
-  position: relative;
-  width: 300px;
-  height: 450px;
+.create-form .over {
   overflow: hidden;
+}
+
+.create-form .over .form-label {
+  position: relative;
+  width: 250px;
+  height: 300px;
   cursor: pointer;
   border: 1px solid #232323;
 }
 
-.create-form .drop .input {
+.create-form .over .form-label .input {
   position: absolute;
-  width: 300px;
-  height: 450px;
+  width: 250px;
+  height: 300px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -41,7 +44,7 @@ select {
   opacity: 0;
 }
 
-.create-form .drop .fas {
+.create-form .over .form-label .fas {
   position: absolute;
   opacity: 0.3;
   left: 50%;
@@ -51,8 +54,15 @@ select {
   z-index: -1;
 }
 
-.create-form .drop .img {
-  width: 300px;
-  height: 450px;
+.create-form .over .form-label .img {
+  width: 250px;
+  height: 300px;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1250px;
 }
 

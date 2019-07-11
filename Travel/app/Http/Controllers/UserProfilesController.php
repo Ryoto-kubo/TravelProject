@@ -8,7 +8,6 @@ use App\Http\Requests\UsersProfileRequest;
 
 class UserProfilesController extends Controller
 {
-    //
 
     public function getUserProfile()
     {

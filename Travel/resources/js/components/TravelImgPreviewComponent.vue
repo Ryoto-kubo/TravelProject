@@ -1,20 +1,20 @@
 <template>
     <div class="over">
-        <label for="file-sample">
-            <div class="drop">
-                <input class="input" id="file-sample" type="file" name="user_img" @change="onFileChange">
-                <i aria-hidden="true" class="fas fa-plus fa-7x"></i>
-                <img class="img" id="file-preview" v-show="uploadedImage" :src="uploadedImage">
-            </div>
+        <label class="form-label" for="file-sample">
+            {{errorMsg}}
+            <input class="input" id="file-sample" type="file" :name="formName" @change="onFileChange">
+            <i aria-hidden="true" class="fas fa-plus fa-7x"></i>
+            <img class="img" id="file-preview" v-if="imagePreview" :src="imagePreview">
         </label>
     </div>
 </template>
  
 <script>
 export default {
+    props: ['errorMsg', 'formName'],
     data() {
          return {
-             uploadedImage: "",
+            imagePreview: '',
          };
     },
     methods: {
@@ -26,7 +26,7 @@ export default {
         createImage(file) {
             let reader = new FileReader(); //File API生成
             reader.onload = (e) => {
-                this.uploadedImage = e.target.result;
+                this.imagePreview = e.target.result;
             };
 
             reader.readAsDataURL(file);

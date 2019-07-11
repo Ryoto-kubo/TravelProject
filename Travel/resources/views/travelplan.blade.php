@@ -100,28 +100,24 @@
         </select>
     </div>
 
-    <!-- @if($errors->has('category'))
-        <span class="error-msg">{{ $errors->first('category') }}</span>
-    @endif
-    <div>
-        旅行日程:
-        <select size="1" name="category">
-            <option value="日帰り">日帰り</option>
-            <option value="一泊二日">一泊二日</option>
-            <option value="二泊三日">二泊三日</option>
-            <option value="三泊四日">三泊四日</option>
-            <option value="長期">長期</option>
-        </select>
+    <!-- @if($errors->has('travel_img01'))
+        <span class="error-msg">{{ $errors->first('travel_img01') }}</span>
+    @endif -->
+    <!-- <div>
+        <input type="file" class="input js-img" name="travel_img01">
     </div> -->
 
-    @if($errors->has('travel_img01'))
-        <span class="error-msg">{{ $errors->first('travel_img01') }}</span>
-    @endif
-    <div>
-        <input type="file" class="input js-img" name="travel_img01">
+    <div class="flex-box">
+        @for($i = 1; $i <= 5; $i++)
+        <travel-img-preview
+            error-msg="{{ $errors->first('travel_img0'.$i) }}"
+            form-name="travel_img0{{$i}}">
+        </travel-img-preview>
+        @endfor
+    </user-img-preview>
     </div>
 
-    @if($errors->has('travel_img02'))
+    <!-- @if($errors->has('travel_img02'))
         <span class="error-msg">{{ $errors->first('travel_img02') }}</span>
     @endif
     <div>
@@ -147,7 +143,7 @@
     @endif
     <div>
         <input type="file" class="input js-img" name="travel_img05">
-    </div>
+    </div> -->
 
     <button　type="submit">送信</button>
     </form>
