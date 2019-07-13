@@ -59,11 +59,11 @@
                                     <a class="dropdown-item" href="{{ route('mypage') }}">
                                          マイページ
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('mytravelplan') }}">
-                                         作成旅行プラン一覧
-                                    </a>
                                     <a class="dropdown-item" href="{{ route('profile.create') }}">
                                         プロフィール編集
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('mytravelplan') }}">
+                                         作成旅行プラン一覧
                                     </a>
                                     <a class="dropdown-item" href="{{ route('travel.plan.create') }}">
                                         旅行プラン登録

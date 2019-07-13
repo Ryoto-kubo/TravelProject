@@ -14,4 +14,5 @@ class TravelPlan extends Model
     
     // テーブル名の指定
     protected $table = 'travelplans';
+
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use App\User;
 use App\UserProfiles;
 use App\Http\Requests\UsersProfileRequest;
 
@@ -31,7 +32,8 @@ class UserProfilesController extends Controller
     public function create(UsersProfileRequest $request)
     {
         $carrent_user_id = Auth::id();
-        
+        $carrent_user = User::find($carrent_user_id);
+
         //プロフィール編集時imgデータを選択しなかった時の処理
         if($request->user_img !== NUll)
         {   
@@ -50,7 +52,6 @@ class UserProfilesController extends Controller
         $users_profile = UserProfiles::updateOrCreate([
             'user_id'       => $carrent_user_id
         ], [
-            'user_id'       => $carrent_user_id,
             'name'          => $request->name,
             'profile'       => $request->profile,
             'user_img'      => $file, //パスをDBに保存

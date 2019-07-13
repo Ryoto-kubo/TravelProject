@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use Session;
+use App\User;
 use App\TravelPlan;
 use Illuminate\Http\Request;
 use App\Http\Requests\TravelPlansRequest;
@@ -32,11 +32,11 @@ class TravelPlansController extends Controller
     public function createTravelPlan(TravelPlansRequest $request)
     {
         $carrent_user_id = Auth::id();
-        
+        $carrent_user = User::find($carrent_user_id);
+
         // travelplansTABLEのインスタンス生成
         $travelplan = new TravelPlan();
 
-        $travelplan->user_id      = $carrent_user_id;
         $travelplan->title        = $request->title;
         $travelplan->introduction = $request->introduction;
         $travelplan->price        = $request->price;
@@ -47,9 +47,9 @@ class TravelPlansController extends Controller
         $travelplan->travel_img03 = $this->nullCheck($request->travel_img03);
         $travelplan->travel_img04 = $this->nullCheck($request->travel_img04);
         $travelplan->travel_img05 = $this->nullCheck($request->travel_img05);
-        // Session::put('file_name', $fileName);
         
-        $travelplan->save();
+        $carrent_user->travelplan()->save($travelplan);
+
         return redirect('/travel/plan/create/list');
     }
 

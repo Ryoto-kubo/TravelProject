@@ -35,7 +35,7 @@
         <span class="error-msg">{{ $errors->first('user_img') }}</span>
     @endif
     <user-img-preview
-        image="{{$userdata ? $user_profile->user_img : 'NUll'}}"
+        image="{{$userdata ? $user_profile->user_img : ''}}"
         image-path="/storage/">
     </user-img-preview>
     <div><button type="submit">送信</button></div>

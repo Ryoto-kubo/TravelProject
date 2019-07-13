@@ -33,6 +33,6 @@ class CreateUsersProfileTable extends Migration
      */
     public function down()
     {
-        // Schema::dropIfExists('users_profile');
+        Schema::dropIfExists('users_profile');
     }
 }

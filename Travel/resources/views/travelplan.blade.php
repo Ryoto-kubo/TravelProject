@@ -116,35 +116,7 @@
         @endfor
     </user-img-preview>
     </div>
-
-    <!-- @if($errors->has('travel_img02'))
-        <span class="error-msg">{{ $errors->first('travel_img02') }}</span>
-    @endif
-    <div>
-        <input type="file" class="input js-img" name="travel_img02">
-    </div>
-
-    @if($errors->has('travel_img03'))
-        <span class="error-msg">{{ $errors->first('travel_img03') }}</span>
-    @endif
-    <div>
-        <input type="file" class="input js-img" name="travel_img03">
-    </div>
-
-    @if($errors->has('travel_img04'))
-        <span class="error-msg">{{ $errors->first('travel_img04') }}</span>
-    @endif
-    <div>
-        <input type="file" class="input js-img" name="travel_img04">
-    </div>
-
-    @if($errors->has('travel_img05'))
-        <span class="error-msg">{{ $errors->first('travel_img05') }}</span>
-    @endif
-    <div>
-        <input type="file" class="input js-img" name="travel_img05">
-    </div> -->
-
+    
     <button　type="submit">送信</button>
     </form>
 @endsection

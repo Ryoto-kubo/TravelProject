@@ -40,8 +40,5 @@ class CreateTravelplansTable extends Migration
     public function down()
     {
         Schema::dropIfExists('travelplans');
-        // Schema::table('travelplans', function ($table) {
-        //     $table->dropColumn('category');
-        // });
     }
 }
