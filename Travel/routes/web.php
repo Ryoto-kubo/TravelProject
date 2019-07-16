@@ -18,7 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+//topページ
+Route::get('/top', 'TopPageController@show')->name('top');
 //マイページ
 Route::get('/mypage', 'MyPageController@show')->name('mypage');
 
